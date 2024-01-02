@@ -1,0 +1,12 @@
+[submodule "IDKGameEngine"]
+	path = IDKGameEngine
+	url = https://github.com/mellic03/IDKGameEngine.git
+[submodule "IDKGameLoader"]
+	path = IDKGameLoader
+	url = https://github.com/mellic03/IDKGameLoader.git
+[submodule "libidk"]
+	path = libidk
+	url = https://github.com/mellic03/libidk.git
+[submodule "IDKGame"]
+	path = IDKGame
+	url = https://github.com/mellic03/IDKGame.git
