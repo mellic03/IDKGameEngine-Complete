@@ -1,12 +1,16 @@
 [submodule "IDKGameEngine"]
 	path = IDKGameEngine
 	url = https://github.com/mellic03/IDKGameEngine.git
+	ignore = dirty
 [submodule "IDKGameLoader"]
 	path = IDKGameLoader
 	url = https://github.com/mellic03/IDKGameLoader.git
+	ignore = dirty
 [submodule "libidk"]
 	path = libidk
 	url = https://github.com/mellic03/libidk.git
+	ignore = dirty
 [submodule "IDKGame"]
 	path = IDKGame
 	url = https://github.com/mellic03/IDKGame.git
+	ignore = dirty
