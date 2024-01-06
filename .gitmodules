@@ -18,5 +18,5 @@
 	path = IDKGraphics
 	url = https://github.com/mellic03/IDKGraphics.git
 [submodule "IDKEditorUI"]
-	path = IDKEditorUI
+	path = IDKBuiltin
 	url = https://github.com/mellic03/IDKEditorUI
