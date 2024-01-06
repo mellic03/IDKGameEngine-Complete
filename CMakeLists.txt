@@ -35,14 +35,15 @@ endif ()
 
 
 include_directories(${CMAKE_SOURCE_DIR}/libidk/src/)
-include_directories(${CMAKE_SOURCE_DIR}/IDKRenderEngine/src/)
+include_directories(${CMAKE_SOURCE_DIR}/IDKGraphics/src/)
 include_directories(${CMAKE_SOURCE_DIR}/IDKGameEngine/src/)
+include_directories(${CMAKE_SOURCE_DIR}/IDKBuiltin/src/)
 
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/libidk/)
-add_subdirectory(${CMAKE_SOURCE_DIR}/IDKRenderEngine/)
+add_subdirectory(${CMAKE_SOURCE_DIR}/IDKGraphics/)
 add_subdirectory(${CMAKE_SOURCE_DIR}/IDKGameEngine/)
 add_subdirectory(${CMAKE_SOURCE_DIR}/IDKGame/)
-add_subdirectory(${CMAKE_SOURCE_DIR}/IDKEditorUI/)
+add_subdirectory(${CMAKE_SOURCE_DIR}/IDKBuiltin/)
 add_subdirectory(${CMAKE_SOURCE_DIR}/IDKGameLoader/)
 

@@ -14,6 +14,9 @@
 	path = IDKGame
 	url = https://github.com/mellic03/IDKGame.git
 	ignore = dirty
-[submodule "IDKRenderEngine"]
-	path = IDKRenderEngine
-	url = https://github.com/mellic03/IDKRenderEngine.git
+[submodule "IDKGraphics"]
+	path = IDKGraphics
+	url = https://github.com/mellic03/IDKGraphics.git
+[submodule "IDKEditorUI"]
+	path = IDKEditorUI
+	url = https://github.com/mellic03/IDKEditorUI

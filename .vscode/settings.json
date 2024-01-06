@@ -84,13 +84,14 @@
         "deque": "cpp",
         "queue": "cpp",
         "stack": "cpp",
-        "typeindex": "cpp"
+        "typeindex": "cpp",
+        "condition_variable": "cpp"
     },
     "C_Cpp.default.includePath": [
         "${default}",
         "${workspaceFolder}/IDKEditorUI/external/include/",
         "${workspaceFolder}/IDKGameEngine/src/",
-        "${workspaceFolder}/IDKRenderEngine/src/",
+        "${workspaceFolder}/IDKGraphics/src/",
         "${workspaceFolder}/libidk/src/"
     ]
 }

@@ -15,11 +15,11 @@ cd ../release
 
 
 cd ../../
-cp -R ../IDKRenderEngine/IDKGE ./debug/.
+cp -R ../IDKGraphics/IDKGE ./debug/.
 cp -R ../IDKGame/assets        ./debug/.
-cp -R ../IDKEditorUI/assets    ./debug/.
+cp -R ../IDKBuiltinUI/assets   ./debug/.
 
 
-# cp -R ../IDKRenderEngine/IDKGE ./release/.
+# cp -R ../IDKGraphics/IDKGE ./release/.
 # cp -R ../IDKGame/assets        ./release/.
 # cp -R ../IDKEditorUI/assets    ./release/.
