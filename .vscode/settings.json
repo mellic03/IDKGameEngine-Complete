@@ -89,7 +89,7 @@
     },
     "C_Cpp.default.includePath": [
         "${default}",
-        "${workspaceFolder}/IDKEditorUI/external/include/",
+        "${workspaceFolder}/IDKGameEngine/external/include/",
         "${workspaceFolder}/IDKGameEngine/src/",
         "${workspaceFolder}/IDKGraphics/src/",
         "${workspaceFolder}/libidk/src/"
