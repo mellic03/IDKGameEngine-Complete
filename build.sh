@@ -2,15 +2,26 @@
 
 mkdir -p build/CMake
 mkdir -p build/CMake/{debug,release}
+mkdir -p build/{debug,release}
+
 
 cd build/CMake/debug
-cmake -DCMAKE_BUILD_TYPE=Debug -DUSE_IDK_DEBUG=ON -G Ninja ../../../
+cmake -DCMAKE_BUILD_TYPE=DEBUG -DIDK_DEBUG=ON -G Ninja ../../../
 ninja
 cmake --install .
 
-
-cd ../release
-# cmake -DCMAKE_BUILD_TYPE=Release -DUSE_IDK_DEBUG=OFF -G Ninja ../../../
+# cd ../release
+# cmake -DCMAKE_BUILD_TYPE=RELEASE -G Ninja ../../../
 # ninja
 # cmake --install .
 
+
+cd ../../
+cp ./lib/debug/*.so ./debug/IDKGE/runtime/.
+mv ./debug/IDKGE/runtime/libIDKBuiltin* ./debug/IDKGE/runtime/modules/.
+mv ./debug/IDKGE/runtime/libgame* ./debug/IDKGE/runtime/modules/.
+
+
+# cp ./lib/release/*.so ./release/IDKGE/runtime/.
+# mv ./release/IDKGE/runtime/libIDKBuiltin* ./release/IDKGE/runtime/modules/.
+# mv ./release/IDKGE/runtime/libgame* ./release/IDKGE/runtime/modules/.
