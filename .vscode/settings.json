@@ -92,7 +92,16 @@
         "cassert": "cpp",
         "strstream": "cpp",
         "complex": "cpp",
-        "source_location": "cpp"
+        "source_location": "cpp",
+        "semaphore": "cpp",
+        "shared_mutex": "cpp",
+        "stop_token": "cpp",
+        "__mutex_base": "cpp",
+        "cfenv": "cpp",
+        "mutex": "cpp",
+        "stdfloat": "cpp",
+        "__errc": "cpp",
+        "codecvt": "cpp"
     },
     "C_Cpp.default.includePath": [
         "${default}",

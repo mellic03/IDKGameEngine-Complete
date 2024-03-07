@@ -10,7 +10,7 @@ cmake -DCMAKE_BUILD_TYPE=DEBUG -DIDK_DEBUG=ON -G Ninja ../../../
 ninja
 cmake --install .
 
-# cd ../release
+cd ../release
 # cmake -DCMAKE_BUILD_TYPE=RELEASE -G Ninja ../../../
 # ninja
 # cmake --install .

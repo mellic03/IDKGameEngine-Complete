@@ -57,6 +57,8 @@ endif ()
 include_directories(${CMAKE_SOURCE_DIR}/libidk/src/)
 include_directories(${CMAKE_SOURCE_DIR}/IDKGraphics/src/)
 include_directories(${CMAKE_SOURCE_DIR}/IDKGameEngine/src/)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/IDKGameEngine/thirdparty/physx/include/)
+
 
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/libidk/)
