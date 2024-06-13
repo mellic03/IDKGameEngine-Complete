@@ -101,7 +101,10 @@
         "mutex": "cpp",
         "stdfloat": "cpp",
         "__errc": "cpp",
-        "codecvt": "cpp"
+        "codecvt": "cpp",
+        "text_encoding": "cpp",
+        "csignal": "cpp",
+        "execution": "cpp"
     },
     "C_Cpp.default.includePath": [
         "${default}",

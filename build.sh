@@ -19,7 +19,7 @@ cd ../release
 cd ../../
 cp ./lib/debug/*.so ./debug/IDKGE/runtime/.
 mv ./debug/IDKGE/runtime/libIDKBuiltin* ./debug/IDKGE/runtime/modules/.
-mv ./debug/IDKGE/runtime/libgame* ./debug/IDKGE/runtime/modules/.
+mv ./debug/IDKGE/runtime/libgame* ./debug/.
 
 
 # cp ./lib/release/*.so ./release/IDKGE/runtime/.
