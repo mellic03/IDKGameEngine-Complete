@@ -104,7 +104,8 @@
         "codecvt": "cpp",
         "text_encoding": "cpp",
         "csignal": "cpp",
-        "execution": "cpp"
+        "execution": "cpp",
+        "regex": "cpp"
     },
     "C_Cpp.default.includePath": [
         "${default}",
