@@ -7,9 +7,9 @@
 [submodule "libidk"]
 	path = libidk
 	url = https://github.com/mellic03/libidk.git
-[submodule "IDKGame"]
-	path = IDKGame
-	url = https://github.com/mellic03/IDKGame.git
+[submodule "MEATWORLD"]
+	path = MEATWORLD
+	url = https://github.com/mellic03/MEATWORLD.git
 [submodule "IDKGraphics"]
 	path = IDKGraphics
 	url = https://github.com/mellic03/IDKGraphics

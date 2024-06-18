@@ -6,14 +6,15 @@ cmake_policy(SET CMP0048 NEW)
 set(CMAKE_BUILD_PARALLEL_LEVEL 24)
 set(CMAKE_INSTALL_MESSAGE LAZY)
 
+set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_COLOR_DIAGNOSTICS ON)
 
 
 
-# set(CMAKE_CXX_FLAGS "-std=c++17 -Wuninitialized -Winit-self -Wmaybe-uninitialized -Werror -fsanitize=undefined -fdiagnostics-color=always -lstdc++fs")
+# set(CMAKE_CXX_FLAGS "-std=c++23 -Werror -fsanitize=undefined -fdiagnostics-color=always -lstdc++fs")
 # add_compile_options("-O3" "-fPIC" "-fno-ident" "-fno-asynchronous-unwind-tables")
-add_compile_options("-std=c++23")
+# add_compile_options("-std=c++23")
 
 if(MSVC)
 else()
@@ -46,7 +47,7 @@ else()
     set(IDK_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/release/)
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/release/)
     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/lib/release/)
-    add_compile_options("-O3")
+    add_compile_options("-Ofast")
 
 
 endif ()
@@ -64,8 +65,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/IDKGameEngine/thirdparty/physx/i
 add_subdirectory(${CMAKE_SOURCE_DIR}/libidk/)
 add_subdirectory(${CMAKE_SOURCE_DIR}/IDKGraphics/)
 add_subdirectory(${CMAKE_SOURCE_DIR}/IDKGameEngine/)
-add_subdirectory(${CMAKE_SOURCE_DIR}/IDKGame/)
-add_subdirectory(${CMAKE_SOURCE_DIR}/IDKGameLoader/)
+add_subdirectory(${CMAKE_SOURCE_DIR}/MEATWORLD/)
+# add_subdirectory(${CMAKE_SOURCE_DIR}/IDKGameLoader/)
 add_subdirectory(${CMAKE_SOURCE_DIR}/IDKtools/)
 
 
