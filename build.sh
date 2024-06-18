@@ -11,9 +11,9 @@ ninja
 cmake --install .
 
 cd ../release
-cmake -DCMAKE_BUILD_TYPE=RELEASE Ninja ../../../
-ninja
-cmake --install .
+# cmake -DCMAKE_BUILD_TYPE=RELEASE Ninja ../../../
+# ninja
+# cmake --install .
 
 
 cd ../../
@@ -23,7 +23,7 @@ mv ./debug/IDKGE/runtime/libIDKBuiltin* ./debug/IDKGE/runtime/modules/.
 mv ./debug/IDKGE/runtime/libgame* ./debug/.
 
 
-mkdir -p ./release/IDKGE/runtime/modules
-cp ./lib/release/*.so ./release/IDKGE/runtime/.
-mv ./release/IDKGE/runtime/libIDKBuiltin* ./release/IDKGE/runtime/modules/.
-mv ./release/IDKGE/runtime/libgame* ./release/.
+# mkdir -p ./release/IDKGE/runtime/modules
+# cp ./lib/release/*.so ./release/IDKGE/runtime/.
+# mv ./release/IDKGE/runtime/libIDKBuiltin* ./release/IDKGE/runtime/modules/.
+# mv ./release/IDKGE/runtime/libgame* ./release/.
