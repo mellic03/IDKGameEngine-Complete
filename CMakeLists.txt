@@ -66,7 +66,6 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/libidk/)
 add_subdirectory(${CMAKE_SOURCE_DIR}/IDKGraphics/)
 add_subdirectory(${CMAKE_SOURCE_DIR}/IDKGameEngine/)
 add_subdirectory(${CMAKE_SOURCE_DIR}/MEATWORLD/)
-# add_subdirectory(${CMAKE_SOURCE_DIR}/IDKGameLoader/)
 add_subdirectory(${CMAKE_SOURCE_DIR}/IDKtools/)
 
 
