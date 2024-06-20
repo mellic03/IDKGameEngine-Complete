@@ -16,6 +16,7 @@ set(CMAKE_COLOR_DIAGNOSTICS ON)
 # add_compile_options("-O3" "-fPIC" "-fno-ident" "-fno-asynchronous-unwind-tables")
 # add_compile_options("-std=c++23")
 
+
 if(MSVC)
 else()
     add_compile_options(
@@ -28,9 +29,6 @@ else()
     )
 endif()
 
-
-
-
 string(ASCII 27 Esc)
 set(Green "${Esc}[32m")
 
@@ -40,14 +38,14 @@ if (IDK_DEBUG)
     set(IDK_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/debug/)
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/debug/)
     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/lib/debug/)
-    add_compile_options("-g" "-O0")
+    # add_compile_options("-g" "-O0")
 
-else()
+else ()
     message("${Green}------ Release build ------")
     set(IDK_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/release/)
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/release/)
     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/lib/release/)
-    add_compile_options("-Ofast")
+    add_compile_options("-O3")
 
 
 endif ()
@@ -55,10 +53,42 @@ endif ()
 
 
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/glew-2.1.0/include/)
+
+add_definitions(
+    -DTW_STATIC
+    -DTW_NO_LIB_PRAGMA
+    -DTW_NO_DIRECT3D
+    -DGLEW_STATIC
+)
+
+# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2-2.30.4/include/)
+# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_ttf-2.22.0/include/)
+# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_net-2.2.0/include/)
+# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_mixer-2.8.0/include/)
+# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_image-2.8.2/include/)
+
+
+# set(CMAKE_EXE_LINKER_FLAGS "-static")
+# set(CMAKE_FIND_LIBRARY_SUFFIXES ".a" CONFIG)
+# set(BUILD_SHARED_LIBS OFF)
+
+
+set(SDL2MIXER_VENDORED ON CACHE BOOL "" FORCE)
+
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2-2.30.4/)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_ttf-2.22.0/)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_net-2.2.0/)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_mixer-2.8.0/)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_image-2.8.2/)
+
+
+
 include_directories(${CMAKE_SOURCE_DIR}/libidk/src/)
 include_directories(${CMAKE_SOURCE_DIR}/IDKGraphics/src/)
 include_directories(${CMAKE_SOURCE_DIR}/IDKGameEngine/src/)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/IDKGameEngine/thirdparty/physx/include/)
+
 
 
 
