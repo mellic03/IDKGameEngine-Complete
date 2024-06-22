@@ -12,9 +12,6 @@ set(CMAKE_COLOR_DIAGNOSTICS ON)
 
 
 
-# set(CMAKE_CXX_FLAGS "-std=c++23 -Werror -fsanitize=undefined -fdiagnostics-color=always -lstdc++fs")
-# add_compile_options("-O3" "-fPIC" "-fno-ident" "-fno-asynchronous-unwind-tables")
-# add_compile_options("-std=c++23")
 
 
 if(MSVC)
@@ -38,6 +35,9 @@ if (IDK_DEBUG)
     set(IDK_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/debug/)
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/debug/)
     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/lib/debug/)
+
+    set(CMAKE_CXX_FLAGS "-Werror -fsanitize=undefined -lstdc++fs")
+    add_compile_options("-g")
     # add_compile_options("-g" "-O0")
 
 else ()
@@ -62,17 +62,6 @@ add_definitions(
     -DGLEW_STATIC
 )
 
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2-2.30.4/include/)
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_ttf-2.22.0/include/)
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_net-2.2.0/include/)
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_mixer-2.8.0/include/)
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_image-2.8.2/include/)
-
-
-# set(CMAKE_EXE_LINKER_FLAGS "-static")
-# set(CMAKE_FIND_LIBRARY_SUFFIXES ".a" CONFIG)
-# set(BUILD_SHARED_LIBS OFF)
-
 
 set(SDL2MIXER_VENDORED ON CACHE BOOL "" FORCE)
 
@@ -82,6 +71,8 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_net-2.2.0/)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_mixer-2.8.0/)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_image-2.8.2/)
 
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/glm/)
+# add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/imgui-1.90.8/)
 
 
 include_directories(${CMAKE_SOURCE_DIR}/libidk/src/)

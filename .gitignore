@@ -1,7 +1,3 @@
 build
-external/glew-2.1.0/*
-external/SDL2_image-2.8.2/*
-external/SDL2_mixer-2.8.0/*
-external/SDL2_net-2.2.0/*
-external/SDL2_ttf-2.22.0/*
-external/SDL2-2.30.4/*
+external/*
+!external/*.sh
