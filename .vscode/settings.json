@@ -110,7 +110,9 @@
         "coroutine": "cpp",
         "buffer": "cpp",
         "executor": "cpp",
-        "syncstream": "cpp"
+        "syncstream": "cpp",
+        "meatnet": "cpp",
+        "print": "cpp"
     },
     "C_Cpp.default.includePath": [
         "${default}",

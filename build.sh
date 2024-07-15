@@ -8,7 +8,7 @@ mkdir -p build/{debug,release}
 cd build/CMake/debug
 cmake -D CMAKE_BUILD_TYPE=DEBUG -D IDK_DEBUG=ON -G Ninja ../../../
 ninja
-cmake --install .
+# cmake --install .
 
 cd ../release
 # cmake -D CMAKE_BUILD_TYPE=RELEASE -G Ninja ../../../
