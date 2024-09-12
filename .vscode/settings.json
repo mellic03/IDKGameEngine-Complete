@@ -112,7 +112,9 @@
         "executor": "cpp",
         "syncstream": "cpp",
         "meatnet": "cpp",
-        "print": "cpp"
+        "print": "cpp",
+        "ccccc": "c",
+        "*.glsl": "glsl"
     },
     "C_Cpp.default.includePath": [
         "${default}",
