@@ -123,5 +123,8 @@
         "${workspaceFolder}/IDKGraphics/src/",
         "${workspaceFolder}/libidk/src/"
     ],
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "glsllint.glslifyOptions": {
+
+    }
 }

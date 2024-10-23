@@ -36,9 +36,9 @@ if (IDK_DEBUG)
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/debug/)
     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/lib/debug/)
 
-    set(CMAKE_CXX_FLAGS "-Werror -fsanitize=undefined -lstdc++fs")
+    set(CMAKE_CXX_FLAGS "-Werror -fsanitize=undefined -fsanitize-undefined-trap-on-error -lstdc++fs")
+    # add_compile_options("-g" "-O1")
     add_compile_options("-g")
-    # add_compile_options("-g" "-O0")
 
 else ()
     message("${Green}------ Release build ------")
@@ -64,7 +64,6 @@ add_definitions(
 
 
 set(SDL2MIXER_VENDORED ON CACHE BOOL "" FORCE)
-
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2-2.30.4/)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_ttf-2.22.0/)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2_net-2.2.0/)
@@ -87,6 +86,7 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/libidk/)
 add_subdirectory(${CMAKE_SOURCE_DIR}/IDKGraphics/)
 add_subdirectory(${CMAKE_SOURCE_DIR}/IDKGameEngine/)
 add_subdirectory(${CMAKE_SOURCE_DIR}/MEATWORLD/)
+add_subdirectory(${CMAKE_SOURCE_DIR}/demos/flightsim/)
 add_subdirectory(${CMAKE_SOURCE_DIR}/IDKtools/)
 
 
